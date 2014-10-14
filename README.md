@@ -16,7 +16,7 @@ Assemble
 
 Run on Qemu
 	
-	qemu-system-i386 -fda boot_sector.bi
+	qemu-system-i386 -fda boot_sector.bin
 
 Checkout the machine code of the assembled boot sector with
 
