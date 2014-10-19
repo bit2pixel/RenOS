@@ -2,7 +2,7 @@
 ; A function to convert a hex number to string
 ; Example: 0x12ED -> "0x12ED"
 
-print_hex:
+print_hex_16:
     pusha
     mov ah, 0Eh ; teletype sub-function.
 

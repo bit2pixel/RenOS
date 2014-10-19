@@ -1,7 +1,9 @@
 ; Author: Renan Cakirerk
 ; Print a string on the screen
 
-print:
+[bits 16]
+
+print_string_16:
     ; Put BIOS in tele-type output mode
     mov ah, 0x0e
 
@@ -9,7 +11,7 @@ print:
 
     ; If end of the string, then return
     cmp al, 0
-    je end_print
+    je end_print_16
 
     ; Show the character
     int 0x10
@@ -17,9 +19,9 @@ print:
     ; Increment the string pointer
     ; and call self again
     inc bx
-    jmp print   
+    jmp print_string_16   
 
     ; Jump here when the string is terminated
-    end_print:
+    end_print_16:
         ; Restore accumulators
         ret
