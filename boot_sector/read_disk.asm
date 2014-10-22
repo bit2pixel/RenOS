@@ -1,5 +1,6 @@
 ; Author: Renan Cakirerk
 ; Read a given number of sectors from the first cylinder and head
+[bits 16]
 
 read_disk:
     push dx
@@ -20,7 +21,7 @@ read_disk:
  
 disk_read_error:
     mov bx, DISK_ERROR_MSG
-    call print
+    call print_string_16
     jmp $
 
 DISK_ERROR_MSG : db "Error reading the disk!", 10, 13
