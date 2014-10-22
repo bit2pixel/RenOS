@@ -1,3 +1,5 @@
+![alt tag](https://raw.github.com/bit2pixel/renos/master/renos.png)
+
 RenOS
 =====
 
