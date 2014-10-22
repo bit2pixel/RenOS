@@ -11,11 +11,11 @@ start:
                                 ; so we'll remember that
 
     mov bp, 0x9000              ; start stack from this address
+
     mov sp, bp
 
     mov bx, STR_INIT_16
     call print_string_16
-
 
     call load_kernel            ; load kernel
 
@@ -62,7 +62,3 @@ SCREEN_COLORS equ 0x1a
 ; bootloader
 times 510-($-$$) db 0
 dw 0xaa55
-
-; test data for reading after the boot sector
-; times 256 dw 0xdada
-; times 256 dw 0xface
